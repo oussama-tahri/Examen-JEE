@@ -117,6 +117,105 @@ Il s'agit d'une application web Java Enterprise Edition (JEE) pour gérer les co
 - Les participants peuvent s'inscrire à plusieurs sessions.
 - Les participants peuvent poster des commentaires pour chaque conférence (invités, intervenants ou modérateurs).
 
+```markdown
+# Conception :
+
+`Session`
+- id
+- nom
+- modérateur: Modérateur (1 session est animée par 1 modérateur)
+- salle: Salle (1 session se déroule dans 1 salle)
+- conférences: List<Conférence> (1 session se compose de plusieurs conférences)
+
+`Conférence`
+- id
+- titre
+- date
+- heureDébut
+- heureFin
+- description
+- speaker: Speaker (1 conférence est animée par 1 speaker)
+- commentaires: List<Commentaire> (1 conférence peut avoir plusieurs commentaires)
+
+`Salle`
+- id
+- nom
+
+`Participant`
+- id
+- nom
+- email
+- photo
+- genre
+
+`Modérateur`
+- spécialité
+- session: Session (1 modérateur anime 1 session)
+
+`Invité`
+- affiliation
+- inscriptions: List<Inscription> (1 invité peut effectuer plusieurs inscriptions)
+
+`Speaker`
+- profilPro
+- conférences: List<Conférence> (1 speaker peut animer plusieurs conférences)
+
+`Inscription`
+- id
+- date
+- statut
+- prix
+- session: Session (1 inscription concerne 1 session)
+- invité: Invité (1 inscription est effectuée par 1 invité)
+
+`Commentaire`
+- id
+- date
+- contenu
+- likes
+- conférence: Conférence (1 commentaire concerne 1 conférence)
+- participant: Participant (1 commentaire est posté par 1 participant)
+```
+``` markdown
+# Architecture Technique :
+
++---------------------+
+|                     |
+|    Base de données  |
+|    (SGBD)           |
+|                     |
++---------------------+
+          |
+          |
++------------------------+
+|                        |
+|    Couche Backend      |
+|    (Spring Boot,       |
+|     Hibernate)         |
+|                        |
++------------------------+
+          |
+          |
++------------------------+
+|                        |
+|   API REST             |
+|    (Communication avec |
+|     le Front)          |
+|   (Restful API)        |
+|                        |
++------------------------+
+          |
+          |
++------------------------+
+|                        |
+|   Couche Frontend      |
+| (Thymeleaf ou Angular) |
+|                        |
++------------------------+
+
+
+```
+
 ## Exigences Techniques
 
 - Les données sont stockées dans une base de données MySQL ou H2.
