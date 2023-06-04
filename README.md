@@ -2,10 +2,14 @@
 <br>
 <hr>
 <h4 align="center">
+   Exemple 1 : <br>
 (https://drive.google.com/file/d/1qWerutsnH4z7Qbf9Uqx_V-FS4Njq-k6w/view?usp=share_link)
+ <br><br><br><br> Exemple 2 : <br>
+(https://drive.google.com/file/d/1aro8w_w1Vy4eybLrP7ad1iShXJgJH9sB/view?usp=drive_link)
 </h4>
    <hr>
 
+# Exemple 1 : (Solution)
 
 ```markdown
 # Application de Gestion de Conférences
@@ -542,4 +546,424 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   
 }
 
+```
+
+<hr>
+
+# Exemple 2 : (Solution)
+
+```markdown
+# Application de gestion de consultations médicales
+
+L'objectif de cette application est de développer un système basé sur le Spring Framework permettant de gérer les consultations relatives aux rendez-vous des patients chez les médecins. Chaque patient peut effectuer plusieurs rendez-vous, chaque rendez-vous étant associé à un médecin spécifique. Chaque rendez-vous est lié à une seule consultation, et chaque consultation est liée à un seul rendez-vous.
+```
+
+```markdown
+
+## Questions de concepts QCM
+
+1. Si la couche métier d’une application est orientée objet et les données de l’application sont stockées dans des Système de Gestion de Base de Données Relationnelles comme MySQL, l’opération suivante s’impose :
+   A. Le Mapping Objet Document
+   B. Le Mapping Objet Relationnel
+   C. Le Mapping Objet XML
+   D. Le Mapping Objet JSON
+
+   **Réponse : B. Le Mapping Objet Relationnel**
+
+2. Quelles définitions qui sont correctes qui vous semble plus appropriée à JPA ?
+   A. JPA est une API de persistances des objets JAVA dans des SGBD relationnelles
+   B. JPA est une spécification Java/JEE qui définit un ensemble d’interfaces, d’annotations et de classes qui permet de standardiser le mapping objet relationnelle pour les applications Java/JEE
+   C. JPA est une API de gestion de la sécurité
+   D. JPA est un standard pour les systèmes distribués Java
+
+   **Réponse :  A. JPA est une API de persistances des objets JAVA dans des SGBD relationnelles et B. JPA est une spécification Java/JEE qui définit un ensemble d’interfaces, d’annotations et de classes qui permet de standardiser le mapping objet relationnelle pour les applications Java/JEE**
+
+3. Dans Spring, quelle est l’annotation qui permet de faire l’injection des dépendances ?
+   A. @Inject
+   B. @DependencyInject
+   C. @Autowired
+   D. @AutoInject
+
+   **Réponse : C. @Autowired**
+
+4. Quelle est l’implémentation de référence de JPA ?
+   A. Hibernate
+   B. Toplink
+   C. EclipseLink
+   D. IBatis
+
+   **Réponse : A. Hibernate**
+
+5. Quelle est la relation qui existe entre JPA et Hibernate ?
+   A. JPA est une API et Hibernate et une implémentation de JPA
+   B. Hibernate est une API et JPA est un Framework qui implémente JPA
+   C. Aucune relation entre JPA et Hibernate
+
+   **Réponse : A. JPA est une API et Hibernate et une implémentation de JPA**
+
+6. Quelles sont les deux annotations JPA qui sont obligatoires pour créer une entité JPA ?
+   A. @JPAEntity
+   B. @Entity
+   C. @Id
+   D. @Table
+
+   **Réponse : B. @Entity, C. @Id**
+
+7. Dans JPA, quelle est l’annotation qui permet de désigner un attribut d’une entité JPA comme clé primaire de la table correspondante ?
+   A. @PrimaryKey
+   B. @KeyIdentifier
+   C. @Identifier
+   D. Id
+
+   **Réponse : D. @Id**
+
+8. Dans JPA, quelle est l’annotation qui permet de spécifier que la valeur de l’identifiant d’une entité JPA est générée automatiquement par le SGBD pour chaque nouvel enregistrement de la table correspondant à cette entité JPA?
+   A. @AutoIncrement
+   B. @GenerateValue
+   C. @GeneratedValue
+   D. @Identity
+
+   **Réponse : C. @GeneratedValue**
+
+9. Dans une application Spring Boot utilisant Spring Data JPA, quelle est l’annotation qui permet de délégu
+
+er à Spring la gestion des transactions ?
+   A. @UseTransactions
+   B. @Transactional
+   C. @Transact
+
+   **Réponse : B. @Transactional**
+
+10. Comment déployer une servlet ?
+    A. En la déclarant dans le fichier web.xml
+    B. En la déclarant dans le fichier web-deploy.xml
+    C. En la déclarant dans le fichier web-deployment.xml
+    D. En utilisant l’annotation @WebServlet
+
+    **Réponse : D. En utilisant l’annotation @WebServlet**
+
+11. Quelle annotation permet de marquer une classe comme étant un contrôleur Spring MVC ?
+    A. @Controller
+    B. @WebController
+    C. @RequestController
+    D. @DispatcherController
+
+    **Réponse : A. @Controller**
+
+12. Quelle annotation à utiliser sur une méthode pour que celle-ci soit exécutée quand une requête http est envoyée par la méthode GET avec le path « /index » ?
+    A. @GetMapping(path="/index")
+    B. @Get(path="/index")
+    C. @GetHttpMapping(path="/index")
+    D. @RequestMapping(value="/index", method=HttpMethod.GET)
+
+    **Réponse : A. @GetMapping(path="/index")**
+
+13. Quelle est l’annotation à utiliser sur un paramètre p de la méthode d’un contrôleur pour associer à un paramètre p la valeur transmise comme paramètre URL. La méthode est précédée par l’annotation @GetMapping(path="/search") et l’url est sous la forme http://localhost:8080/search?keyword=az
+    A. @PathParameter(name="keyword") String p
+    B. @PathVariable(name="keyword") String p
+    C. @RequestParam (name="keyword") String p
+    D. @PathParameter(name="keyword") String p
+
+    **Réponse : A. @RequestParam (name="keyword") String p**
+
+14. Dans une vue basée sur thymeleaf, comment créer un lien hypertexte vers l’action /detail en envoyant avec le line deux paramètres x et y dont les valeurs se trouvent dans les variables x et y d’un objet p du contexte ?
+    A. <a th:href="@{/detail(x=${p.x},y=${p.y})}"> Details</a>
+    B. <a th:href="/detail?x=${p.x}&y=${p.y}"> Details</a>
+    C. <a th:href="@{/detail(x=${p.x} & y=${p.y})}"> Details</a>
+    D. <a th:href="@{/detail(x,y=${p.x, p.y})}"> Details</a>
+
+    **Réponse : A. <a th:href="@{/detail(x=${p.x},y=${p.y})}"> Details</a>**
+
+15. Dans la sécurité Web, Que signifie le type d’attaque CSRF ?
+    A. Cross Sheet Request Foreign
+    B. Cross Site Request Forgery
+    C. Cross Security Request Forgery
+
+    **Réponse : B. Cross Site Request Forgery**
+
+
+```
+
+## Règles Métier
+
+- Un patient peut effectuer plusieurs rendez-vous chez des médecins.
+- Chaque rendez-vous est associé à une seule consultation.
+- Chaque consultation concerne un seul rendez-vous.
+- Chaque patient est défini par son identifiant, son nom, son email et sa date de naissance.
+- Chaque médecin est défini par son identifiant, son nom et sa spécialité.
+- Chaque rendez-vous est défini par son identifiant, sa date et un attribut indiquant s'il est annulé ou non.
+- Chaque consultation est définie par son identifiant, sa description, le traitement prescrit et le type de consultation (présentielle ou distantielle).
+
+```markdown
+# 1. Diagramme de classes des entités avec les attributs :
+
+`Patient`
+- id : int
+- nom : string
+- email : string
+- dateNaissance : date
+
+`Medecin`
+- id : int
+- nom : string
+- specialite : string
+
+`RendezVous`
+- id : int
+- date : date
+- annule : bool
+
+`Consultation`
+- id : int
+- description : string
+- traitementPrescrit : string
+- typeConsultation : string
+```
+```markdown
+# 2. Modèle logique de données relationnel avec les tables et les relations :
+
+
+Table: `Patient`
+- id (PK, int)
+- nom (string)
+- email (string)
+- dateNaissance (date)
+
+Table: `Medecin`
+- id (PK, int)
+- nom (string)
+- specialite (string)
+
+Table: `RendezVous`
+- id (PK, int)
+- date (date)
+- annule (bool)
+- patientId (FK, int)
+- medecinId (FK, int)
+
+Table: `Consultation`
+- id (PK, int)
+- description (string)
+- traitementPrescrit (string)
+- typeConsultation (string)
+- rendezVousId (FK, int)
+- 
+
+### Relations :
+- Patient (1) ---- (*) RendezVous
+- Medecin (1) ---- (*) RendezVous
+- RendezVous (1) ---- (1) Consultation
+
+```
+
+## Exigences Techniques
+
+- Les données sont stockées dans une base de données MySQL ou H2
+- L’application se compose de trois couches :
+- La couche DAO qui est basée sur Spring Data, JPA, Hibernate et JDBC.
+- La couche métier (Interfaces et implémentations)
+- La couche Web basée sur Spring MVC Coté Serveur avec thymeleaf comme moteur de templates.
+- L’inversion de contrôle est basée sur Spring IOC.
+- La sécurité est basée sur Spring Security
+
+## Implémentation
+
+### Couche DAO
+
+- Écrire le code des entités JPA de l'application en utilisant les annotations Lombok.
+- Écrire le code des interfaces JPA Repository basées sur Spring Data pour chaque entité.
+
+
+
+# a) Code des entités JPA de l'application: (Patient, Medecin, Rendez-vous et Consultation) :
+
+```java
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Patient {
+    @Id
+    private int id;
+    private String nom;
+    private String email;
+    private LocalDate dateNaissance;
+    @OneToMany
+    private List<Patient> patient;
+}
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Medecin {
+    @Id
+    private int id;
+    private String nom;
+    private String specialite;
+    @OneToMany
+    private List<RendezVous> rendezVous;
+}
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class RendezVous {
+    @Id
+    private int id;
+    private LocalDate date;
+    private boolean annule;
+    @ManyToOne
+    private Patient patient;
+    @ManyToOne
+    private Medecin medecin;
+    @OneToOne
+    private Consultation consultation;
+}
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Consultation {
+    @Id
+    private int id;
+    private String description;
+    private String traitementPrescrit;
+    private String typeConsultation;
+    @OneToOne
+    private RendezVous rendezVous;
+}
+```
+
+# b) Code des interfaces JPA Repository basées sur Spring Data:
+
+```java
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PatientRepository extends JpaRepository<Patient, Integer> {
+    List<Patient> findByNomContaining(String keyword);
+}
+
+public interface RendezVousRepository extends JpaRepository<RendezVous, Integer> {
+    List<RendezVous> findByPatient(Patient patient);
+}
+
+public interface ConsultationRepository extends JpaRepository<Consultation, Integer> {
+//
+}
+```
+
+### Couche Métier
+
+- Ecrire le code de l’interface `IHopitalMetier` permettant de répondre aux
+spécifications fonctionnelles suivantes :
+• Consulter les clients dont le nom contient un mot clé
+• Consulter les rendez-vous d’un patient
+- Ecrire le code java d’une implémentation de l’interface IHopitalMetier
+
+# a) Code de l'interface IHopitalMetier :
+
+```java
+public interface IHopitalMetier {
+    List<Patient> chercherPatientsParNom(String motCle);
+    List<RendezVous> consulterRendezVousPatient(Patient patient);
+}
+```
+
+# b) Code d'une implémentation de l'interface IHopitalMetier :
+
+```java
+@Service
+public class HopitalMetierImpl implements IHopitalMetier {
+    private PatientRepository patientRepository;
+    private RendezVousRepository rendezVousRepository;
+
+    public HopitalMetierImpl(PatientRepository patientRepository, RendezVousRepository rendezVousRepository) {
+        this.patientRepository = patientRepository;
+        this.rendezVousRepository = rendezVousRepository;
+    }
+
+    @Override
+    public List<Patient> chercherPatientsParNom(String motCle) {
+        return patientRepository.findByNomContaining(motCle);
+    }
+
+    @Override
+    public List<RendezVous> consulterRendezVousPatient(Patient patient) {
+        return rendezVousRepository.findByPatient(patient);
+    }
+}
+```
+
+### Couche Web
+
+-  Ecrire le code du Contrôleur Spring MVC d’effectuer l’opération demandée
+
+# a) Code du Contrôleur Spring MVC pour effectuer l'opération demandée :
+
+```java
+@Controller
+public class PatientController {
+    private IHopitalMetier hopitalMetier;
+
+    public PatientController(IHopitalMetier hopitalMetier) {
+        this.hopitalMetier = hopitalMetier;
+    }
+
+    @GetMapping("/patients")
+    public String rechercherPatients(@RequestParam("motCle") String motCle, Model model) {
+        List<Patient> patients = hopitalMetier.chercherPatientsParNom(motCle);
+        model.addAttribute("patients", patients);
+        return "liste-patients";
+    }
+}
+```
+
+### Sécurité
+
+
+Pour sécuriser l'accès à l'application en se basant sur Spring Security avec un système d'authentification des utilisateurs et trois types de rôles (ROLE_PATIENT, ROLE_MEDECIN, ROLE_ADMIN), vous pouvez suivre les étapes suivantes :
+
+a) Ajouter les dépendances Spring Security à votre projet Maven ou Gradle.
+
+b) Configurer la classe `SecurityConfig` pour définir les règles de sécurité, les rôles et les autorisations.
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    
+    @Bean
+    public InMemoryUserDetailsManager inMemoryUserDetailsManager(){
+        return new InMemoryUserDetailsManager(
+                User.withUsername("patient").password(passwordEncoder.encode("1234")).roles("PATIENT").build(),
+                User.withUsername("medecin").password(passwordEncoder.encode("1234")).roles("MEDECIN").build(),
+                User.withUsername("admin").password(passwordEncoder.encode("1234")).roles("PATIENT","MEDECIN","ADMIN").build()
+
+
+        );
+    }
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)throws Exception{
+        httpSecurity.formLogin().loginPage("/login").permitAll();
+        httpSecurity.rememberMe();
+        httpSecurity.authorizeHttpRequests().requestMatchers("/patient/**").hasRole("PATIENT");
+        httpSecurity.authorizeHttpRequests().requestMatchers("/medecin/**").hasRole("MEDECIN");
+        httpSecurity.authorizeHttpRequests().requestMatchers("/admin/**").hasRole("ADMIN");
+        httpSecurity.authorizeHttpRequests().anyRequest().authenticated();
+        httpSecurity.exceptionHandling().accessDeniedPage("/notAuthorized");
+        return httpSecurity.build();
+
+    }
+
+}
 ```
